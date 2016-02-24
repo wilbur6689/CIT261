@@ -9,18 +9,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="box1css.css">
         <title>Box Thirteen Sandbox Code</title>
-        
-        
+        <script type="text/javascript">
+        /* Input: 
+         * Precessing: 
+         *   
+         * Output: 
+         */
+            var vid = document.getElementById("introAudio");
+             
+            function playAud() { 
+                introAudio.play(); 
+            } 
+
+            function pauseAud() { 
+                introAudio.pause(); 
+            } 
+             
+            function restartAud() { 
+                introAudio.load(); 
+            } 
+             
+            var vid = document.getElementById("intoMovie");
+             
+            function playVid() { 
+                intoMovie.play(); 
+            } 
+
+            function pauseVid() { 
+                intoMovie.pause(); 
+            } 
+             
+            function restartVid() { 
+                intoMovie.load(); 
+            } 
+             
+        </script> 
+             
     </head>
     
     <body>
+        <p>Here is a welcome message</p>
+            <audio id="introAudio" src="ghost-howl.wav" controls></audio><br>
         
-        <h2>This is the Happy Path for the SandBox Code</h2>
-    
+            <button type="button" onclick="playAud()">PLAY</button>
+            <button type="button" onclick="pauseAud()">PAUSE</button>
+            <button type="button" onclick="restartAud()">RESTART</button><br>
         
-    
+        <p>This is a video.</p>
+            <video id="intoMovie" src="mov_bbb.mp4" width="520" height="340"></video><br>
         
-        <button type="button" onclick="">Click here</button>
+            <button type="button" onclick="playVid()">PLAY</button>
+            <button type="button" onclick="pauseVid()">PAUSE</button>
+            <button type="button" onclick="restartVid()">RESTART</button>
         
         
     </body>

@@ -7,8 +7,8 @@
         <meta charset="utf-8">
         <meta name="author" content="Phillip Willis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="box1css.css">
-        <title>Box Nine Sandbox Code</title>
+        <link rel="stylesheet" type="text/css" href="box9css.css">
+        <title>Box Nine Sandbox Code - EVENTS</title>
         
         
     </head>
@@ -17,10 +17,48 @@
         
         <h2>This is the Happy Path for the SandBox Code</h2>
     
-        
+        <div id="touchBox" class="touchBox1"></div>
     
+        <script type="text/javascript">
+            
+            // HAPPY PATH for events
+            var div1 = document.querySelector("#touchBox");
+            
+            var pageXOffset;
+            var pageYOffset;
+            
+            window.ontouchstart = function (event) {
+                
+                
+                //var bigger = div1.style.width = "300px";
+                var left = div1.style.left.replace("px", "")*1;
+                var top = div1.style.top.replace("px", "")*1;
+                
+                pageXOffset = event.changedTouches[0].pageX - left;
+                pageYOffset = event.changedTouches[0].pageY - top;
+            }
+            
+            //Drag the dv around the screen with your finger
+            
+            div1.ontouchmove = function (event) {
+                
+                var pageX = event.changedTouches[0].pageX;
+                var pageY = event.changedTouches[0].pageY;
+                
+                div1.style.left = pageX - pageXOffset + 'px';
+                div1.style.top = pageY - pageYOffset + 'px';
+                
+            }
+            
+            
+            //print the event object on touchend
+            window.ontouchend = function (event) {
+                console.log(event);
+            }
+            
+            
+        </script>
         
-        <button type="button" onclick="">Click here</button>
         
         
     </body>

@@ -7,22 +7,68 @@
         <meta charset="utf-8">
         <meta name="author" content="Phillip Willis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="box1css.css">
-        <title>Box Seven Sandbox Code</title>
+        <link rel="stylesheet" type="text/css" href="box7css.css">
+        <title>Box Seven Sandbox Code - trigger animations</title>
         
         
     </head>
     
     <body>
+        <h2>This is a ball bouncing</h2>
+        <div id="paddle" class="hand hand-smacking"></div>
+        <div id="ball" class="target target-bouncing" ></div>
+        <br />
+        <button onclick="startAnimate()">start the animation</button>
+                
         
-        <h2>This is the Happy Path for the SandBox Code</h2>
-    
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div id="greenBox" onclick="makeBig(this)" class="green"></div>
+        <br />
         
-    
-        
-        <button type="button" onclick="">Click here</button>
+        <div id="redBox" onclick="makeRotate(this)" class="red"></div>
         
         
+        <script type="text/javascript">
+        /* Input: 
+         * Precessing: 
+         *   
+         * Output: 
+         */
+           
+             var paddle = document.querySelector("#paddle");
+             var ball = document.querySelector("#ball");
+        
+            
+            window.ontouchstart = function (event) {
+                
+                
+                var paddleMove = paddle.style.animationName = "smacking";
+                var ballMove = ball.style.animationName = "bouncing";
+            
+             
+            }
+             
+            
+            function makeBig(theBox) {
+                 theBox.style.width="300px"
+             }
+             
+             
+             function makeRotate(theBox) {
+                 theBox.style.transform = "rotate(45deg)";
+                 
+
+             }
+        </script>
     </body>
     
 </html>

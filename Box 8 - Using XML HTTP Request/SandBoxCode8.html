@@ -7,20 +7,35 @@
         <meta charset="utf-8">
         <meta name="author" content="Phillip Willis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="box1css.css">
+        <link rel="stylesheet" type="text/css" href="box8css.css">
         <title>Box Eight Sandbox Code</title>
         
-        
+            <script type="text/javascript">
+                
+            function loadDoc() {
+                
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (xhttp.readyState == 4 && xhttp.status == 200) {
+                        document.getElementById("demo").innerHTML = xhttp.responseText;
+                    }
+                }
+            xhttp.open("GET", "info.txt", true);
+            xhttp.send();
+            }  
+            
+
+
+            </script> 
+             
     </head>
     
     <body>
+        <div id="demo">
+            <h2> This item is on sale!!! Click the button below to see the price</h2>
+            </div>
         
-        <h2>This is the Happy Path for the SandBox Code</h2>
-    
-        
-    
-        
-        <button type="button" onclick="">Click here</button>
+        <button type="button" onclick="loadDoc()">See Price</button>
         
         
     </body>

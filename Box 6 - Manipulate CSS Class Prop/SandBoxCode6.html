@@ -7,9 +7,22 @@
         <meta charset="utf-8">
         <meta name="author" content="Phillip Willis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="box1css.css">
+        <link rel="stylesheet" type="text/css" href="box6css.css">
         <title>Box Six Sandbox Code</title>
         
+        <script type="text/javascript">
+            
+            var div1 = document.querySelector("#div");
+            window.ontouchstart = function (event) {
+                var bigger = div1.style.width = "300"}
+            
+            
+            function changeThis(theBox) {
+                 theBox.style.width="300px"
+                 theBox.style.background = "red"
+                 theBox.style.transform = "rotate(180deg)";
+             }
+        </script>
         
     </head>
     
@@ -17,10 +30,10 @@
         
         <h2>This is the Happy Path for the SandBox Code</h2>
     
+        <div id="div" class="theDiv" onclick="changeThis(this)" >This div</div>
+       
         
-    
         
-        <button type="button" onclick="">Click here</button>
         
         
     </body>
