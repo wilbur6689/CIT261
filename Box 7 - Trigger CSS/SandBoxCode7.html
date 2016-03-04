@@ -10,10 +10,63 @@
         <link rel="stylesheet" type="text/css" href="box7css.css">
         <title>Box Seven Sandbox Code - trigger animations</title>
         
+        <script type="text/javascript">
+        
+            function loadMe() {
+                /* Input: 
+         * Precessing: 
+         *   
+         * Output: 
+         */
+           
+             var paddle = document.querySelector("#paddle");
+             var ball = document.querySelector("#ball");
+        
+            
+                window.ontouchstart = function (event) {
+
+
+                    var paddleMove = paddle.style.animationName = "smacking";
+                    var ballMove = ball.style.animationName = "bouncing";
+
+                    /*animation nasty path what happens with no keyframes
+                    * what if the time is negitve
+                    * 
+                    */
+                    
+                    //nasty path to see what happens with no keyframe
+                    var nasty1Box = document.querySelector(".nasty1")
+                    
+                    window.ontouchstart = function (event) {
+                        var nasty1Move = nasty1Box.style.animationName = "nasty1Ani"
+                    }
+                    
+                    //nasty path to see what happens with a negitive time
+                    var nasty2Box = document.querySelector(".nasty2")
+                    
+                    window.ontouchstart = function (event) {
+                        var nasty2Move = nasty2Box.style.animationName = "nasty2Ani"
+                    }
+                }
+            }
+        
+            
+            function makeBig(theBox) {
+                 theBox.style.width="300px"
+             }
+             
+             
+             function makeRotate(theBox) {
+                 theBox.style.transform = "rotate(45deg)";
+                 
+
+             }
+        </script>
+        
         
     </head>
     
-    <body>
+    <body onload="loadMe(), makeBig(), makeRotate()">
         <h2>This is a ball bouncing</h2>
         <div id="paddle" class="hand hand-smacking"></div>
         <div id="ball" class="target target-bouncing" ></div>
@@ -36,39 +89,20 @@
         
         <div id="redBox" onclick="makeRotate(this)" class="red"></div>
         
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="nasty1">nasty1</div>
+        <br />
+        <br />
+        <br />
+        <br />
         
-        <script type="text/javascript">
-        /* Input: 
-         * Precessing: 
-         *   
-         * Output: 
-         */
-           
-             var paddle = document.querySelector("#paddle");
-             var ball = document.querySelector("#ball");
+        <div class="nasty2">nasty2</div>
         
-            
-            window.ontouchstart = function (event) {
-                
-                
-                var paddleMove = paddle.style.animationName = "smacking";
-                var ballMove = ball.style.animationName = "bouncing";
-            
-             
-            }
-             
-            
-            function makeBig(theBox) {
-                 theBox.style.width="300px"
-             }
-             
-             
-             function makeRotate(theBox) {
-                 theBox.style.transform = "rotate(45deg)";
-                 
-
-             }
-        </script>
+        
+        
     </body>
     
 </html>

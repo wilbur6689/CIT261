@@ -7,22 +7,82 @@
         <meta charset="utf-8">
         <meta name="author" content="Phillip Willis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="box1css.css">
+        <link rel="stylesheet" type="text/css" href="box4css.css">
         <title>Box Four Sandbox Code</title>
+        <script>
         
+        function showGames() {
+            
+            sessionStorage.setItem("Game1", "diablo", "Funny Face", "Tie-Dye");
+            
+            sessionStorage.setItem("Game2", "Starcraft");
+            
+            sessionStorage.setItem("Game3", "Warcraft");
+            
+            
+            var firstGame = (sessionStorage.getItem("Game1"));
+            document.getElementById("div1").innerHTML = firstGame;
+                                                         
+                                                         
+            localStorage.setItem("Album", "Creative Jeans");    //works
+            console.log(localStorage.getItem("Album"));  
+            
+            var secondGame = (sessionStorage.getItem("Game2"));
+           document.getElementById("div2").innerHTML = secondGame;
+            
+            
+            var thirdGame = (sessionStorage.getItem("Game3"));
+            document.getElementById("div3").innerHTML = thirdGame
+        }
+            
+         function nasty() {
+            
+            sessionStorage.setItem("Game1", "diablo");
+            
+            sessionStorage.setItem("Game2", "Starcraft");
+            
+            sessionStorage.setItem("Game3", "Warcraft");
+            
+            
+            var firstNasty = (sessionStorage.getItem("Dog Crap"));
+            document.getElementById("div4").innerHTML = firstNasty;
+                                                         
+            
+            var secondNasty = (sessionStorage.getItem(Game2));
+           document.getElementById("div5").innerHTML = secondNasty;
+            
+            
+            var thirdNasty = (sessionStorage.getItem());
+            document.getElementById("div6").innerHTML = thirdNasty;
+        }   
+        
+        </script>
         
     </head>
     
     <body>
         
-        <h2>This is the Happy Path for the SandBox Code</h2>
+        <h2>This is the Happy Path for the Local Storage SandBox Code</h2>
+    
+        <div id="div1"></div>
+        <br>
+        <div id="div2"></div>
+        <br>
+        <div id="div3"></div>
     
         
+        <button type="button" onclick="showGames()">HAPPY</button>
+        <br />
+        <h2>This is the NASTY path for the Local Storage SandBox Code</h2>
+    
+        <div id="div4"></div>
+        <br>
+        <div id="div5"></div>
+        <br>
+        <div id="div6"></div>
     
         
-        <button type="button" onclick="">Click here</button>
-        
-        
+        <button type="button" onclick="nasty()">Nasty</button>
     </body>
     
 </html>

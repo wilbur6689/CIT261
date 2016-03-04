@@ -12,15 +12,42 @@
         
         <script type="text/javascript">
             
-            var div1 = document.querySelector("#div");
-            window.ontouchstart = function (event) {
-                var bigger = div1.style.width = "300"}
-            
-            
+
             function changeThis(theBox) {
                  theBox.style.width="300px"
                  theBox.style.background = "red"
                  theBox.style.transform = "rotate(180deg)";
+             }
+            
+            function changeThis2(theBox) {
+                 
+                 theBox.style.background = "blue"
+                 theBox.style.transform = "scale(2,)";
+                
+                /*negitive time value
+                *set left of the transform as a negitive
+                *negitive numbers for scale
+                *null for scale
+                */
+            }
+            
+            function changeThis3(theBox) {
+                 theBox.style.width="300px"
+                 theBox.style.background = "red"
+                 theBox.style.transform.left = "rotate(180deg)";
+             }
+            
+            function changeThis4(theBox) {
+                 
+                 theBox.style.background = "blue"
+                 theBox.style.transform = "scale(-2,-2) rotate(180deg)";
+             }
+            
+            function changeThis5(theBox) {
+                 
+                 
+                theBox.style.transform = "scale(dog,crap)";
+                theBox.style.background = "blue"
              }
         </script>
         
@@ -31,10 +58,28 @@
         <h2>This is the Happy Path for the SandBox Code</h2>
     
         <div id="div" class="theDiv" onclick="changeThis(this)" >This div</div>
-       
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         
+        <div id="div2" class="theDiv2" onclick="changeThis2(this)" >This div</div>
+        <br />
+        <br />
+        <div id="div3" class="theDiv3" onclick="changeThis3(this)" >This div</div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         
-        
+        <div id="div4" class="theDiv4" onclick="changeThis4(this)" >This 4div</div>
+        <br />
+        <br />
+        <div id="div5" class="theDiv5" onclick="changeThis5(this)" >This div</div>
         
     </body>
     

@@ -13,31 +13,76 @@
             <script type="text/javascript">
                 
             function loadDoc() {
-                
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (xhttp.readyState == 4 && xhttp.status == 200) {
-                        document.getElementById("demo").innerHTML = xhttp.responseText;
+                var data = "http://api.openweathermap.org/data/2.5/weather?q=Seattle,uk&appid=44db6a862fba0b067b1930da0d769e98";
+                var http_request = new XMLHttpRequest();
+                http_request.onreadystatechange = function() {
+                    if (http_request.readyState == 4 && http_request.status == 200) {
+                        console.log(http_request.responseText);
+                        var jsonObj = JSON.parse(http_request.responseText);
+                        
+                        document.getElementById("DisplayCity").innerHTML = jsonObj.name;
+                        document.getElementById("DisplayWeather").innerHTML = jsonObj.weather[0].description;
                     }
-                }
-            xhttp.open("GET", "info.txt", true);
-            xhttp.send();
+                };
+            http_request.open("GET", data, true);
+            http_request.send();
             }  
             
-
+            //nasty path points to something not there, bad server
+                //input null or empty string
+                //dog crap for sting instead of "get"
+                //
+            function loadNasty1() {
+                var data = "http://api.openweathermap.org/data/2.5/weather?q=Seattle,uk&appid=44db6a862fba0b067b1930da0d769e98";
+                var http_request = new XMLHttpRequest();
+                http_request.onreadystatechange = function() {
+                    if (http_request.readyState == 4 && http_request.status == 200) {
+                        console.log(http_request.responseText);
+                        var jsonObj = JSON.parse(http_request.responseText);
+                        
+                        document.getElementById("DisplayCity1").innerHTML = jsonObj.name;
+                        document.getElementById("DisplayWeather1").innerHTML = jsonObj.weather[0].description;
+                    }
+                };
+            http_request.open("GET", "", true);
+            http_request.send();
+            }  
+                
+            function loadNasty2() {
+                var data = "http://api.openweathermap.org/data/2.5/weather?q=Seattle,uk&appid=44db6a862fba0b067b1930da0d769e98";
+                var http_request = new XMLHttpRequest();
+                http_request.onreadystatechange = function() {
+                    if (http_request.readyState == 4 && http_request.status == 200) {
+                        console.log(http_request.responseText);
+                        var jsonObj = JSON.parse(http_request.responseText);
+                        
+                        document.getElementById("DisplayCity2").innerHTML = jsonObj.name;
+                        document.getElementById("DisplayWeather2").innerHTML = jsonObj.weather[0].description;
+                    }
+                };
+            http_request.open("NULL", data, true);
+            http_request.send();
+            } 
 
             </script> 
              
     </head>
     
     <body>
-        <div id="demo">
-            <h2> This item is on sale!!! Click the button below to see the price</h2>
-            </div>
         
-        <button type="button" onclick="loadDoc()">See Price</button>
+        <h2> Weather report</h2>
         
-        
+        <p id="DisplayCity">City will display here</p>
+        <p id="DisplayWeather">Weather will display here</p>
+        <button type = "button" onclick = "loadDoc()"> Display Details </button>
+        <br>
+        <p id="DisplayCity1">City will display here</p>
+        <p id="DisplayWeather1">Weather will display here</p>
+        <button type = "button" onclick = "loadNasty1()"> Display nasty1 </button>
+        <br>
+        <p id="DisplayCity2">City will display here</p>
+        <p id="DisplayWeather2">Weather will display here</p>
+        <button type = "button" onclick = "loadNasty2()"> Display nasty2 </button>
     </body>
     
 </html>

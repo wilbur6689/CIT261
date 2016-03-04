@@ -7,20 +7,43 @@
         <meta charset="utf-8">
         <meta name="author" content="Phillip Willis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="box1css.css">
-        <title>Box Three Sandbox Code</title>
+        <link rel="stylesheet" type="text/css" href="box3css.css">
+        <title>JSON Stringify Sandbox Code</title>
         
+        <script>
+        
+            function runStuff() {
+        var employeeList = '{"team":[' +
+                    '{"firstName": "nate", "lastName": "Weathers"},' +
+                    '{"firstName": "Sally", "lastName": "wright"},' +
+                    '{"firstName": "Jill", "lastName": "Hammer"},' +
+                    '{"firstName": "Bob", "lastName": "Anderson"}]}';             
+        
+            
+            //  Here is another example of a happy path
+            
+            var obj = JSON.parse(employeeList);
+
+            document.getElementById("happypath").innerHTML = obj.team[1].firstName + " " + obj.team[1].lastName;
+             
+            
+            }
+            //nastyPaths
+            //console.log(JSON.parse(null));
+            //console.log(JSON.parse(dogCrap));
+        
+        </script>
         
     </head>
     
     <body>
         
-        <h2>This is the Happy Path for the SandBox Code</h2>
+        <h2>This is the Happy Path for the Stringify SandBox Code</h2>
     
         
-    
+        <div id="happypath"></div>
         
-        <button type="button" onclick="">Click here</button>
+        <button type="button" onclick="runStuff()">Click here</button>
         
         
     </body>

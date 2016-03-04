@@ -1,0 +1,9 @@
+/* CSS STYLESHEET for EVENTS*/
+
+#happyPath {
+    background: green;
+    border: 2px solid;
+    height: 200px;
+    width: 200px;
+    position: relative;
+}

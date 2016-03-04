@@ -17,3 +17,40 @@
     border: 2px solid;
     transition: transform 5s;
 }
+
+
+.theDiv2 {
+    background: yellow;
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    transition: transform 5s;
+}
+.theDiv3 {
+    
+    background: brown;
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    transition: transform 5s;
+
+}
+
+.theDiv4 {
+   
+    background: purple;
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    transition: transform 2s;
+    margin-left: 150px;
+
+}
+
+.theDiv5 {
+     background: gray;
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    transition: transform -5s;
+}
