@@ -7,9 +7,37 @@
         <meta charset="utf-8">
         <meta name="author" content="Phillip Willis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="box1css.css">
-        <title>Box Eleven Sandbox Code</title>
-        
+        <link rel="stylesheet" type="text/css" href="box11css.css">
+        <title>Box Ten Sandbox Code</title>
+        <script type="text/javascript">
+            
+            window.addEventListener("resize", wiggle);
+            
+         
+
+            function wiggle() {
+                
+                  
+                    //set to running
+                    //set time for how long you want it to wiggle
+                    //after timer runs set to paused.
+                topRight.style.animationName = wiggle;
+                topLeft.style.animationName = wiggle;
+                bottomRight.style.animationName = wiggle;
+                bottomLeft.style.animationName = wiggle;
+                
+                setTimeout(function() { 
+                    topRight.style.animationName = null;
+                    topLeft.style.animationName = null;
+                    bottomRight.style.animationName = null;
+                    bottomLeft.style.animationName = null;
+                   }, 255);
+
+                
+            }
+
+            
+        </script>
         
     </head>
     
@@ -17,8 +45,14 @@
         
         <h2>This is the Happy Path for the SandBox Code</h2>
     
+        <div id="myDivs">
         
-    
+            <div id="topLeft"></div>
+            <div id="topRight"></div>
+            <div id="bottomLeft"></div>
+            <div id="bottomRight"></div>
+            
+        </div>
         
         <button type="button" onclick="">Click here</button>
         
@@ -26,3 +60,4 @@
     </body>
     
 </html>
+

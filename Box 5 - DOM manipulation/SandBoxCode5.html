@@ -7,21 +7,111 @@
         <meta charset="utf-8">
         <meta name="author" content="Phillip Willis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="box1css.css">
-        <title>Box Five Sandbox Code</title>
-        
+        <link rel="stylesheet" type="text/css" href="box5css.css">
+        <title>Box Five DOM Sandbox Code</title>
+        <script type="text/javascript">
+            
+           
+            
+            function monday() {
+                
+                    var list = document.getElementById("salePrices");
+                    list.removeChild(list.childNodes[1]);
+                    
+                    var newListItem = document.createElement("LI")
+                    newListItem.innerText = "Monday Sale Price: $33.99"
+                    
+                    var list = document.getElementById("salePrices");
+                    list.insertBefore(newListItem, list.childNodes[1]);
+              
+                    
+            }
+                
+            function tuesday() {
+                    
+                    var list = document.getElementById("salePrices");
+                    list.removeChild(list.childNodes[2]);
+                    
+                    var newListItem = document.createElement("LI")
+                    newListItem.innerText = "Tuesday Sale Price: $19.99!!!"
+                    
+                    var list = document.getElementById("salePrices");
+                    list.insertBefore(newListItem, list.childNodes[3]);
+                
+                    
+                    
+            }
+                    
+            function wednesday() {
+                    
+                    var wednesdaySpan = document.getElementById("wednesdaySale");
+                    wednesdaySpan.innerText = "$39.99"
+                    
+                }
+            function thursday() {
+                    
+                 var list = document.getElementById("salePrices");
+                    list.removeChild(dogCrap.childNodes[6]);
+                    
+                    var newListItem = document.createElement("LI")
+                    newListItem.innerText = "Thursday Sale Price: $109.99"
+                    
+                    var list = document.getElementById("salePrices");
+                    list.insertBefore(newListItem, list.childNodes[6]);
+                
+                }
+                
+            function friday() {
+                    
+                    var list = document.getElementById("salePrices");
+                    list.removeChild(list.childNodes[6]);
+                    
+                    var newListItem = document.createElement()
+                    newListItem.innerText = "Friday Sale Price: $999.73"
+                    
+                    var list = document.getElementById("salePrices");
+                    list.insertBefore(newListItem, list.childNodes[6]);
+                }
+                
+           function saturday() {
+                    
+                    var saturdaySpan = document.getElementById("wednesdaySale");
+                    wednesdaySpan.innerText = ;
+               
+                }
+                
+                
+            
+            
+            function removePrice() {
+                
+            }
+            
+        </script>
         
     </head>
-    
     <body>
         
-        <h2>This is the Happy Path for the SandBox Code</h2>
+        <h2>This is the Happy Path for the DOM SandBox Code</h2>
     
+        <h3>Here are the sale prices for this week:</h3>
+        <ul id="salePrices">
+            <li id="mondaySale"></li>
+            <li>Tuesday <span id="tuesdaySale">$??.??</span></li>
+            <li>Wednesday <span id="wednesdaySale">$??.??</span></li>
+            <li>Thursday <span id="thursdaySale">$99.99</span></li>
+            <li>Friday <span id="fridaySale">$??.??</span></li>
+            <li>Saturday <span id="saturdaySpan">$??.??</span></li>
+            
+        </ul>
         
-    
         
-        <button type="button" onclick="">Click here</button>
-        
+        <button id="monday" type="button" onclick="monday(this)">See Monday Price</button><br>
+        <button id="tuesday" type="button" onclick="tuesday(this)">See Tuesday Price</button><br>
+        <button id="wednesday" type="button" onclick="wednesday(this)">See Wednesday Price</button><br>
+        <button id="thursday" type="button" onclick="thursday(this)">See Thursday Price</button><br>
+        <button id="friday" type="button" onclick="friday(this)">See Friday Price</button><br>
+        <button id="saturday" type="button" onclick="saturday(this)">See Saturday Price</button><br>
         
     </body>
     

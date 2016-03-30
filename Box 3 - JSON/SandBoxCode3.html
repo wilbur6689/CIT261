@@ -24,8 +24,12 @@
             
             var obj = JSON.parse(employeeList);
 
-            document.getElementById("happypath").innerHTML = obj.team[1].firstName + " " + obj.team[1].lastName;
-             
+            for (var i=0; i<obj.team.length; i++) {   
+            document.getElementById("happypath").innerHTML += 
+                obj.team[i].firstName 
+                + " " 
+                + obj.team[i].lastName + "<br>";
+            }
             
             }
             //nastyPaths

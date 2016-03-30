@@ -7,9 +7,27 @@
         <meta charset="utf-8">
         <meta name="author" content="Phillip Willis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="box1css.css">
+        <link rel="stylesheet" type="text/css" href="box10css.css">
         <title>Box Ten Sandbox Code</title>
-        
+        <script type="text/javascript">
+            
+            function flip(topBackground, middleBackground) {
+                
+                topBackground.style.height="1px";
+                middleBackground.style.height="1px";
+
+                document.getElementById("topBackground").innerHTML = "";
+                document.getElementById("middleBackground").innerHTML = "";
+                
+                document.getElementById("topText").innerHTML = "Username <input/>";
+                document.getElementById("middleText").innerHTML = "Password <input/>";
+                
+                document.getElementById("bottomDiv").innerHTML = "Enter your information above.";
+             
+                
+            }
+            
+        </script>
         
     </head>
     
@@ -17,12 +35,28 @@
         
         <h2>This is the Happy Path for the SandBox Code</h2>
     
-        
-    
-        
-        <button type="button" onclick="">Click here</button>
-        
-        
+        <div id="myDivs">
+            <h1>This is my page of stuff</h1>
+            <h2>Make an account below to get started</h2>
+            
+            <div id="topText"></div>
+            <div id="topBackground">
+                <h3 class="flip">Facebook</h3>
+                
+            </div>
+            
+            
+            <div id="middleText"></div>
+            <div id="middleBackground">
+                <h3 class="flip">Twitter</h3>
+                
+            </div>
+            
+            
+            <div id="bottomDiv">
+                <h3 class="logIn" onclick="flip(topBackground, middleBackground, this)">Create a new account</h3>
+            </div>
+
+        </div>
     </body>
-    
 </html>
